@@ -1,0 +1,18 @@
+extends index
+
+block content
+  h1 #{pagina}
+
+  if id
+    p Ingrese el código: #{id}
+  
+    form(method="post", action=`/buscaCurso /${id}`)
+      button.btn(type="submit") Buscar curso 
+
+  else
+    p Se necesita un código.
+
+  form(method="get", action="/buscaCurso ")
+    label(for="id") Ingrese el código:
+    input(type="text", name="id", placeholder="Código")
+    button.btn(type="submit") Buscar

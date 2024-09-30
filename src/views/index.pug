@@ -1,0 +1,28 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Universidad Universal | #{pagina}
+        link(rel="stylesheet", href="/css/app.css")
+    body.min-h-screen.bg-gray-50 
+        
+        nav.bg-white.shadow
+            .container.mx-auto.px-4
+                .flex.justify-between.items-center.h-16
+                    a.text-xl.font-bold.text-gray-800(href="/") Universidad Universal
+                    ul.flex.space-x-4
+                        li
+                            a(href="/alumno/verAlumno" class="text-gray-600 hover:text-indigo-600 font-bold") Ver alumnos
+                        li
+                            a(href="/profesores/verProfesores"  class="text-gray-600 hover:text-indigo-600") Ver profesores
+                        li
+                            a(href="/cursos/verCursos" class="text-gray-600 hover:text-indigo-600") Ver cursos
+                        li
+                            a(href="/CursosAlumno/verInscripciones" class="text-gray-600 hover:text-indigo-600") Ver inscripciones
+
+        main(class="mx-auto container mt-10 px-2")
+            block contenido
+            block scripts
+
+
